@@ -4,7 +4,7 @@
   A public payment webpage will show any details entered here to every visitor.
 */
 const PAYMENT_CONFIG = {
-  displayName: "RATION CARD",
+  displayName: "MALATI",
   pageTitle: "Pay Securely",
   upiId: "9627019097-1@nyes",
   bankName: "India Post Payment Bank",
