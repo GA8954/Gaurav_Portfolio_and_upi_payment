@@ -42,7 +42,7 @@
 
         <div class="qr-frame">
           <div id="qrcode" aria-label="UPI payment QR code"></div>
-          <div id="qrFallback" class="qr-fallback hidden">Add your real UPI ID in <code>config.js</code> to generate your QR code.</div>
+          <div id="qrFallback" class="qr-fallback hidden">Add a valid UPI ID in <code>payment-config.js</code> to generate your QR code.</div>
         </div>
         <p class="qr-caption">Open Google Pay, PhonePe, Paytm or another UPI app and scan this code.</p>
         <button id="payUpiBtn" class="button primary full-width">Open UPI app</button>
@@ -67,22 +67,22 @@
 
         <div class="detail-list">
           <div class="detail-row">
-            <span>RATION CARD </span>
+            <span>Account holder</span>
             <strong id="accountHolder">malati</strong>
             <button class="copy-button" data-copy="holder">Copy</button>
           </div>
           <div class="detail-row">
-            <span>india post payment bank </span>
+            <span>Bank</span>
             <strong id="bankName">india post payment bank </strong>
             <button class="copy-button" data-copy="bank">Copy</button>
           </div>
           <div class="detail-row">
-            <span>054410408230</span>
+            <span>Account number</span>
             <strong id="accountNumber" class="sensitive">054410408230</strong>
             <button class="copy-button" data-copy="account">Copy</button>
           </div>
           <div class="detail-row">
-            <span>e</span>
+            <span>IFSC</span>
             <strong id="ifscCode">IPOS0000001</strong>
             <button class="copy-button" data-copy="ifsc">Copy</button>
           </div>
