@@ -53,10 +53,6 @@
       tn: "Payment"
     });
 
-    if (isValidUpiId(upiId)) {
-      params.set("mode", "02");
-    }
-
     const entered = Number(amount.value);
     if (amount.value && Number.isFinite(entered) && entered > 0) {
       params.set("am", entered.toFixed(2));
@@ -94,7 +90,7 @@
 
   async function copyText(value, label) {
     if (!value || String(value).startsWith("ADD_")) {
-      showToast("Please add your real " + label + " in config.js first.");
+      showToast("Please add your real " + label + " in payment-config.js first.");
       return;
     }
 
@@ -137,7 +133,7 @@
       const label = copyLabels[key] || "detail";
 
       if (!value || String(value).startsWith("ADD_")) {
-        showToast("Please add your real " + label + " in config.js first.");
+        showToast("Please add your real " + label + " in payment-config.js first.");
         return;
       }
 
@@ -147,7 +143,7 @@
 
   $("payUpiBtn").addEventListener("click", () => {
     if (!upiReady) {
-      showToast("Add your real UPI ID in config.js first.");
+      showToast("Add your real UPI ID in payment-config.js first.");
       return;
     }
     window.location.href = getUpiLink();
@@ -158,7 +154,7 @@
     const img = qrBox.querySelector("img");
     const source = canvas ? canvas.toDataURL("image/png") : (img ? img.src : "");
     if (!source) {
-      showToast("Set your UPI ID first to generate a QR code.");
+      showToast("Set your UPI ID in payment-config.js first to generate a QR code.");
       return;
     }
 
@@ -179,7 +175,7 @@
 
     if (!cfg.accountNumber || String(cfg.accountNumber).startsWith("ADD_") ||
         !cfg.ifsc || String(cfg.ifsc).startsWith("ADD_")) {
-      showToast("Complete account number and IFSC in config.js first.");
+      showToast("Complete account number and IFSC in payment-config.js first.");
       return;
     }
 
